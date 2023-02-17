@@ -1,0 +1,696 @@
+/*                               GENERAL SETUP                                   */
+
+html {
+  font: 500 20px "Catamaran", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  color: white;
+  max-width: 68.3rem;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2 {
+  font: 1.2rem "Londrina Solid", cursive;
+}
+
+h3 {
+  font: 1.4rem "Londrina Solid", cursive;
+}
+
+p {
+  font-size: 0.7rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.6rem;
+}
+
+button {
+  border-width: 0;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+}
+
+svg {
+  display: block;
+}
+
+.stroke {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  stroke: white;
+  fill: none;
+}
+
+.large-stroke {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  stroke: #919191;
+  fill: none;
+}
+
+/*                               HEADER                                      */
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+header .container .menu {
+  position: fixed;
+  top: 1.7rem;
+}
+
+header .wrapper {
+  padding: 1.8rem 0.8rem 0 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header button {
+  height: 1.4rem;
+  width: 1.4rem;
+  padding: 0 0.1rem;
+}
+
+header button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.4rem;
+}
+
+header li {
+  margin-bottom: 0.6rem;
+}
+
+header .container a {
+  height: 1.4rem;
+  width: 1.4rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+header .nav-menu {
+  height: 10rem;
+  overflow-y: hidden;
+}
+
+header nav {
+  -webkit-transform: translateY(-10rem);
+  transform: translateY(-10rem);
+}
+
+header .logo {
+  width: 5.1rem;
+  height: 1.2rem;
+}
+/*                               HERO SECTION                                      */
+
+.hero {
+  height: 27.5rem;
+  position: relative;
+}
+
+.hero .bg {
+  height: 100%;
+  display: flex;
+}
+
+.hero .content {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero picture {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 0 1rem 0.9rem 1rem;
+}
+
+.hero a {
+  border-radius: 0.2rem;
+  background-color: #db5c10;
+  color: white;
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 0 0.8rem;
+  align-self: center;
+  margin-right: -9rem;
+  z-index: 1;
+}
+
+.hero p {
+  margin: 0.5rem 0 0.9rem 0;
+}
+
+.hero .wrapper {
+  max-width: 13rem;
+  margin: 0 auto;
+}
+
+.hero .container2 {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.7rem;
+}
+
+.hero .controller {
+  width: 104px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hero .controller::before {
+  content: "";
+  background-color: #ffffff;
+  width: calc(28% / 1.42);
+  height: 2px;
+}
+
+.hero .controller::after {
+  content: "";
+  background-color: #ffffff;
+  width: calc(28% / 1.42);
+  height: 2px;
+}
+
+.hero .controller .deep-container {
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  left: 0;
+  padding: 0 8px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.hero .controller button {
+  background-color: transparent;
+  height: 1.4rem;
+  width: 1.4rem;
+  padding: 0.2rem;
+  z-index: 1;
+}
+
+.hero .slide {
+  width: 8px;
+  height: 8px;
+  background-color: #e0bd00;
+  border-radius: 50%;
+}
+
+/*                               MEMBERSHIP SECTION                                     */
+
+.membership {
+  position: relative;
+  overflow-x: hidden;
+  height: 28rem;
+  border-top: 0.5rem solid white;
+}
+
+.membership .card {
+  grid-column: 1/13;
+  grid-row: 1;
+}
+
+.membership .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.membership .tag {
+  display: none;
+}
+
+.membership .bg {
+  display: none;
+}
+
+.membership .wrapper {
+  grid-column: 2/12;
+  grid-row: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.membership .wrapper a {
+  font-size: 0.7rem;
+  padding: 0 0.8rem;
+  margin-bottom: 2.8rem;
+  align-self: center;
+  border-radius: 0.2rem;
+  background-color: #db5c10;
+  color: white;
+  font-weight: 700;
+}
+
+.membership p {
+  margin: 0.6rem 0 1rem 0;
+}
+
+/*                              PRODUCT SECTION                                     */
+
+/*                             path 1 : ice cake                                      */
+
+@keyframes mobileCard {
+  100% {
+    -webkit-transform: translateX(-0.8rem);
+    transform: translateX(-0.8rem);
+  }
+}
+
+.ice-cake {
+  height: 33.3rem;
+  border-top: 0.5rem solid white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.ice-cake .bg {
+  background: url(./images/ice-cake-bg-small.webp) center / cover no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.ice-cake .container {
+  padding: 0 1rem;
+}
+
+.ice-cake .container p {
+  margin: 0.6rem auto 1rem;
+  max-width: 20rem;
+}
+
+.ice-cake .content {
+  position: relative;
+}
+
+.ice-cake .container2 {
+  padding: 0;
+}
+
+.ice-cake .wrapper {
+  gap: 1.4rem;
+  padding: 0 1.2rem;
+  max-width: 16rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.ice-cake .wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.ice-cake img {
+  max-width: 100%;
+  margin: 0.8rem 0;
+}
+
+.ice-cake .wrapper > .card {
+  width: 100%;
+  padding: 1rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0, 0.122);
+  border: 0.05rem solid rgb(255, 255, 255, 0.122);
+  display: flex;
+  flex-direction: column;
+}
+
+.ice-cake .wrapper.on > .card {
+  -webkit-animation: 1s infinite alternate mobileCard;
+  animation: 1s infinite alternate mobileCard;
+}
+
+.ice-cake .wrapper > .card .tag {
+  background-color: #db5c10;
+  font: 300 1.2rem "Londrina Solid", cursive;
+  padding: 0.4rem 0.4rem;
+  align-self: flex-end;
+  margin: -1.05rem -1.05rem 0 0;
+}
+
+.ice-cake .wrapper .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #db5c10;
+  margin: 1rem 0;
+}
+
+.ice-cake .wrapper span {
+  font-weight: 400;
+}
+
+.ice-cake .wrapper .initial-price {
+  -moz-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  margin-right: auto;
+}
+
+.ice-cake .wrapper .rating {
+  margin-left: 0.6rem;
+}
+
+.ice-cake .wrapper .price-rating {
+  display: flex;
+  justify-content: center;
+}
+
+.ice-cake .controller {
+  display: none;
+}
+
+/*                             path 2 : other type                                      */
+
+.other-type {
+  position: relative;
+  border-top: 0.5rem solid rgb(255, 255, 255);
+  height: 28rem;
+}
+
+.other-type .bg {
+  background: url(./images/other-type-small.webp) center / cover no-repeat;
+  grid-column: 1/13;
+  grid-row: 1/3;
+}
+
+.other-type .container {
+  grid-column: 1/13;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 1.2rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+.other-type .container p {
+  max-width: 16rem;
+  margin: 0.6rem auto 1rem auto;
+}
+
+.other-type .wrapper {
+  grid-column: 1/13;
+  grid-row: 2;
+  display: flex;
+  max-width: 15rem;
+  padding: 0 1.4rem;
+  margin: 0 auto 2.2rem auto;
+}
+
+.other-type .carousel {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  position: relative;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.ice-cake .wrapper.on > .card {
+  -webkit-animation: 1s infinite alternate mobileCard;
+  animation: 1s infinite alternate mobileCard;
+}
+
+.other-type .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.other-type .carousel img {
+  max-width: 100%;
+}
+
+.other-type .carousel > div {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: rgb(31, 13, 14, 0.78);
+  border: 0.05rem solid rgb(255, 255, 255, 0.4);
+  -webkit-transition: 1s;
+  transition: 0.6s;
+}
+
+.other-type .wrapper .other-controller {
+  display: none;
+}
+
+/*                             part 3: favorite                                      */
+
+.favorite {
+  height: 33.3rem;
+  position: relative;
+  border-top: 0.5rem solid white;
+}
+
+.favorite .bg {
+  background: url(./images/favorite-small.webp) center / cover no-repeat;
+  height: 100%;
+  grid-column: 1/13;
+  grid-row: 1/3;
+}
+.favorite .container {
+  grid-column: 1/13;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  max-width: 16rem;
+  margin: 0 auto;
+  padding: 0 0.9rem;
+}
+
+.favorite .container p {
+  margin: 0.6rem 0 3rem 0;
+}
+
+.favorite .container .controller {
+  display: none;
+}
+
+.favorite .carousel {
+  max-width: 14rem;
+  padding: 0 0.9rem;
+  margin: 0 auto;
+  padding-top: 4rem;
+  grid-column: 1/13;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overflow-x: scroll;
+}
+
+.favorite .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.favorite .carousel > div {
+  flex-shrink: 0;
+  padding: 0 0.55rem;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0, 0.122);
+  border: 0.05rem solid rgba(255, 255, 255, 0.122);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite .carousel > div img {
+  margin-top: -3.2rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  max-width: 100%;
+}
+
+.favorite .carousel div:nth-child(2) img {
+  left: 1rem;
+}
+
+.favorite .carousel div:nth-child(3) img {
+  right: 1.4rem;
+}
+
+.favorite .carousel > div .price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #db5c10;
+  margin: 0.4rem 0;
+}
+
+.favorite .feedback {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.favorite .carousel button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+.favorite .share {
+  align-self: flex-end;
+  margin: 0.4rem 0;
+}
+
+/*                             FOOTER                                      */
+
+footer {
+  height: 33.3rem;
+  position: relative;
+  border-top: 0.5rem solid white;
+}
+
+footer .bg {
+  background: url(./images/footer-small.webp) center / cover no-repeat;
+  height: 100%;
+  grid-column: 1/13;
+  grid-row: 1/4;
+}
+
+footer .container {
+  grid-column: 1/13;
+  grid-row: 1;
+  display: flex;
+  padding: 0 1rem;
+}
+
+footer nav {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 21rem;
+}
+
+footer .logo {
+  width: 5.1rem;
+  height: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+footer a {
+  font-size: 0.7rem;
+}
+
+footer .wrapper a {
+  display: block;
+  max-width: 5rem;
+}
+
+footer .notification {
+  padding: 0 1rem;
+  grid-column: 1/13;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+footer .notification p {
+  margin: 0.5rem 0 0.9rem 0;
+}
+
+footer form input {
+  font-size: 0.6rem;
+  font-weight: 400;
+  border-radius: 4px;
+  background-color: #1f0e0e;
+  border: 1px solid #ffffff;
+  color: white;
+  width: 100%;
+  padding-left: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+footer form button {
+  background-color: #db5c10;
+  border-radius: 0.2rem;
+  padding: 0 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+footer form label {
+  position: absolute;
+  left: 10000px;
+  color: transparent;
+}
+
+footer nav li {
+  margin-bottom: 0.3rem;
+}
+
+footer > p {
+  padding: 0 1rem;
+  grid-column: 1/13;
+  grid-row: 3;
+  text-align: center;
+  max-width: 16rem;
+  margin: 0 auto;
+  font: 300 0.7rem "Londrina Solid", cursive;
+}

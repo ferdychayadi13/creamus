@@ -1,0 +1,115 @@
+/*                               HEADER                                        */
+
+@keyframes jump {
+  33.3% {
+    -webkit-transform: translateY(2rem);
+    transform: translateY(2rem);
+  }
+  66.6% {
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+header a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.4rem;
+}
+
+header button .dropdown {
+  stroke-dasharray: 110;
+  stroke-dashoffset: 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+header button.on .dropdown {
+  stroke-dashoffset: 110;
+}
+
+header button .exit {
+  -webkit-transition: 0.6s linear;
+  transition: 0.6s linear;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+}
+
+header button .exit.on {
+  stroke-dashoffset: 0;
+}
+
+/*                              HERO                                       */
+
+@keyframes slideIn {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bounce {
+  100% {
+    -webkit-transform: translateY(-40px) rotate(360deg);
+    transform: translateY(-40px) rotate(360deg);
+  }
+}
+
+@keyframes bounce2 {
+  100% {
+    -webkit-transform: translateY(40px) rotate(360deg);
+    transform: translateY(40px) rotate(360deg);
+  }
+}
+
+.hero .controller button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.4rem;
+}
+
+.hero .controller .hide {
+  -webkit-transform-origin: bottom;
+  -webkit-transform: scaleY(0);
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.hero .controller svg path {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.hero .controller.off .rect1 {
+  -webkit-transform: translate(4px, -12px) rotate(-60deg);
+  transform: translate(4px, -12px) rotate(-60deg);
+}
+
+.hero .controller.off .rect2 {
+  -webkit-transform: translate(-2px, 1px) rotate(60deg);
+  transform: translate(-2px, 1px) rotate(60deg);
+}
+
+.hero .controller.off .rect3 {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.deep-container.two {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.hero .controller.off .slide.pause1 {
+  -webkit-animation: 0.4s alternate infinite bounce;
+  animation: 0.4s alternate infinite bounce;
+}
+
+.hero .controller.off .slide.pause2 {
+  -webkit-animation: 0.4s alternate infinite bounce2;
+  animation: 0.4s alternate infinite bounce2;
+}

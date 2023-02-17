@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creamus</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;700;900&family=Londrina+Solid:wght@300;400&display=swap"
+    />
+    <link rel="stylesheet" href="style/modern-css-reset/reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
+    <link rel="stylesheet" href="style/animation.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="container">
+          <div class="menu">
+            <button class="hamburger" aria-label="Menu">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <title>Hamburger Menu</title>
+                <defs>
+                  <clipPath id="clip-dropdown">
+                    <path
+                      fill="red"
+                      d="m 5.75,10 v 2 h 30.5 v -2 z m 0,10 v 2 h 30.5 v -2 z m 0,10 v 2 h 30.5 v -2 z"
+                    />
+                  </clipPath>
+                </defs>
+                <path
+                  clip-path="url(#clip-dropdown)"
+                  class="stroke dropdown"
+                  d="m 6.75,11 h 28.5 V 21 H 6.75 v 10 h 28.5"
+                />
+                <defs>
+                  <clipPath id="clip-exit">
+                    <path
+                      fill="red"
+                      d="M 9.8872642,1.8467208e-4 C 8.2432942,-0.00371533 6.2244142,0.07766467 4.7095342,0.79315367 2.9920142,1.6043517 1.6047242,2.9916617 0.79351423,4.7091697 c -0.95405,2.019862 -0.78125,4.935327 -0.78125,6.6640623 v 17.279297 c 0,1.72875 -0.17273,4.644224 0.78125,6.664063 0.81119997,1.717514 2.19849997,3.104817 3.91601997,3.916015 2.01984,0.953993 4.93531,0.779297 6.6640598,0.779297 h 17.2793 c 1.72874,0 4.64226,0.174693 6.66211,-0.779297 1.71749,-0.811198 3.1048,-2.19851 3.91601,-3.916015 0.95405,-2.019864 0.78125,-4.935328 0.78125,-6.664063 V 8.2033097 c 0,-2.784028 -1.26336,-4.889013 -2.89844,-6.210937 -1.63505,-1.32192503 -3.59531,-1.93075803 -5.23828,-1.97656303 -0.13044,-0.0036 -0.22674,0.06517 -0.35351,0.06836 a 1,1 0 0 0 -0.36133,-0.07227 h -19.78711 c -0.43218,0 -0.93834,-0.01043 -1.4863298,-0.0117199979 z M 11.373594,2.0119037 h 6.92188 10.33593 c -1.9e-4,0.0012 2e-4,0.0027 0,0.0039 h 3.18946 c 1.16886,0.03259 2.79104,0.525413 4.03515,1.53125 1.24411,1.005838 2.15625,2.454158 2.15625,4.65625 V 28.652519 c 0,1.77155 -0.0611,4.689149 -0.58984,5.808594 -0.61233,1.296443 -1.6645,2.350569 -2.96094,2.962891 -1.11947,0.528734 -4.03706,0.58789 -5.80859,0.58789 h -17.2793 c -1.7715298,0 -4.6910898,-0.05916 -5.8105498,-0.58789 -1.29644,-0.612324 -2.34861,-1.666454 -2.96093,-2.962891 -0.52874,-1.119464 -0.58985,-4.037059 -0.58985,-5.808594 V 11.373232 c 0,-1.7715513 0.0611,-4.6911023 0.58985,-5.8105473 0.61233,-1.296443 1.66449,-2.348617 2.96093,-2.960937 1.11947,-0.528735 4.03902,-0.589844 5.8105498,-0.589844 z m -1.10352,6.84375 -1.4140598,1.4140623 9.7441398,9.744141 -9.7441398,9.742188 1.4140598,1.414062 9.74414,-9.742188 9.74219,9.742188 1.41407,-1.414062 -9.74219,-9.742188 9.74219,-9.744141 -1.41407,-1.4140623 -9.74219,9.7441403 z"
+                    />
+                  </clipPath>
+                </defs>
+                <path
+                  clip-path="url(#clip-exit)"
+                  class="exit stroke"
+                  d="M 9.5622642,9.5622587 30.462264,30.462259 H 9.5622642 L 33.927144,6.0973727 c -12.32462,-6.38676903 5.08512,-7.865948 5.08512,2.106323 V 28.651895 c 0,1.750148 0.0562,4.666849 -0.6852,6.236507 -0.71177,1.506979 -1.93168,2.726892 -3.43866,3.438654 -1.56966,0.741364 -4.48636,0.685201 -6.2365,0.685201 h -17.27928 c -1.7501398,0 -4.6668498,0.05616 -6.2364998,-0.685204 -1.50698,-0.711763 -2.7269,-1.931677 -3.43866,-3.438657 -0.74135997,-1.569655 -0.6852,-4.486353 -0.6852,-6.236501 V 11.37262 c 0,-1.7501493 -0.0562,-4.6668493 0.6852,-6.2365083 0.71177,-1.506979 1.93168,-2.726892 3.43866,-3.438654 1.56966,-0.74136403 4.48636,-0.685201 6.2364998,-0.685201 h 19.7884"
+                />
+              </svg>
+            </button>
+            <div class="nav-menu">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#" aria-label="Cart page">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Cart</title>
+                        <path
+                          class="stroke"
+                          d="M 8.29721,25.14004 A 1.9090233,1.9090233 0 0 1 6.40452,23.4802 1.9090233,1.9090233 0 0 1 7.80312,21.38705"
+                        />
+                        <path
+                          class="stroke"
+                          d="M 30.35704,25.14005 H 8.29721"
+                        />
+                        <path
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="1.41409"
+                          d="M 29.50858,19.20086 8.29721,21.74623 C 6.83849,15.95788 5.52607,10.03482 4.05494,4.3529 H 2.14592 L 1.9338,2.93881 h 4.24228 l 0.84845,3.53523 h 23.33251 z"
+                        />
+                        <path
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="1.27272"
+                          d="m 12.412453,29.878847 a 1.4847783,1.4847783 0 0 1 -1.484779,1.484778 1.4847783,1.4847783 0 0 1 -1.484778,-1.484778 1.4847783,1.4847783 0 0 1 1.484778,-1.484778 1.4847783,1.4847783 0 0 1 1.484779,1.484778 z"
+                        />
+                        <path
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="1.27272"
+                          d="m 27.811561,29.878847 a 1.4847783,1.4847783 0 0 1 -1.484779,1.484778 1.4847783,1.4847783 0 0 1 -1.484778,-1.484778 1.4847783,1.4847783 0 0 1 1.484778,-1.484778 1.4847783,1.4847783 0 0 1 1.484779,1.484778 z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="mailto:info.esiltade@gmx.com"
+                      aria-label="Contact support"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Contact</title>
+                        <path
+                          fill="#ffffff"
+                          d="m 2.7016988,11.751196 c -0.7321487,0.91666 -2.35980088,5.28484 4.618067,12.438147 7.3507102,7.534758 12.0940302,5.922939 12.9106932,5.07311 L 15.314345,24.346288 C 14.628469,25.032171 13.743687,24.423398 12.04552,23.038664 10.922042,22.122593 9.6296098,20.890642 8.5087477,19.501855 7.7226263,18.527685 7.0269874,17.504295 7.7452838,16.785991 Z"
+                        />
+                        <path
+                          fill="#ffffff"
+                          d="m 22.007687,27.502154 c 0.317573,-0.317576 0.286626,-0.804624 -0.0033,-1.094569 v -0.0044 c 0,0 -3.833714,-3.829333 -3.836292,-3.831912 -0.303942,-0.303944 -0.78988,-0.296944 -1.089032,0.0022 l -1.392604,1.392618 4.92864,4.928691 c 0,0 1.391499,-1.387092 1.391499,-1.389303 z"
+                        />
+                        <path
+                          fill="#ffffff"
+                          d="m 9.5184594,15.012797 c 0.3175727,-0.317576 0.2866259,-0.804624 -0.00332,-1.094569 v -0.0044 c 0,0 -3.9442381,-3.9398576 -3.946817,-3.9424365 -0.3037898,-0.3038182 -0.789875,-0.2969656 -1.089027,0.00219 l -1.3926042,1.3926195 5.039164,5.039215 c 0,0 1.3914989,-1.387092 1.3914989,-1.389302 z"
+                        />
+                        <path
+                          class="stroke"
+                          d="m 11.602346,7.3918245 a 22.451516,22.451748 0 0 1 7.883311,5.1052245 v 0 a 22.451516,22.451748 0 0 1 5.101504,7.873772"
+                        />
+                        <path
+                          class="stroke"
+                          d="M 11.601648,2.9823582 A 26.618202,26.618478 0 0 1 22.431949,9.5507259 26.618202,26.618478 0 0 1 29.000001,20.38035"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Sign in page">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Sign in</title>
+                        <path
+                          class="stroke"
+                          d="M 30,16 A 14,14 0 0 1 16,30 14,14 0 0 1 2,16 14,14 0 0 1 16,2 14,14 0 0 1 30,16 Z"
+                        />
+                        <path
+                          class="stroke"
+                          d="M 22.075472,12.301887 A 6.0754724,6.0754724 0 0 1 16,18.377359 6.0754724,6.0754724 0 0 1 9.9245276,12.301887 6.0754724,6.0754724 0 0 1 16,6.2264142 6.0754724,6.0754724 0 0 1 22.075472,12.301887 Z"
+                        />
+                        <path
+                          class="stroke"
+                          d="m 5.794192,25.583397 a 10.830189,10.830189 0 0 1 20.411615,0"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="container2" aria-label="Creamus logo">
+          <div class="logo">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 140.5 33"
+                aria-label="Homepage"
+              >
+                <path
+                  fill="white"
+                  d="m 23,23.3 q 0.4,-0.6 1.1,-2 0.9,-1.7 1.5,-2.5 -1.2,-0.5 -1.9,-1.5 -0.6,-1.1 -0.6,-2.4 0,-1.4 0.5,-2.4 0.6,-1 1.6,-1 1.1,0 1.9,1.1 0.9,1.1 0.9,2.4 0,1.4 -0.8,2.7 0.2,0.2 0.7,0.2 L 31,17.5 q 0.5,0 0.8,0.6 0.3,0.5 0.3,1 0,0.6 -0.3,3.8 -0.4,3.3 -0.4,5.2 0,1.8 0.4,1.8 0.9,0 2.6,-2.3 1.6,-2.3 3.1,-5.7 0.5,-3.9 2.4,-6.1 2.6,-3.2 6.7,-3.2 1.9,0 3.1,1.1 1.3,1 1.3,2.8 0,3.3 -2.9,5.6 -2.8,2.3 -6.9,2.4 0.2,2.2 1.5,3.8 1.3,1.6 2.9,1.6 1.7,0 3.1,-0.8 1.3,-0.8 2.4,-2.3 1.5,-1.9 2.7,-4.2 0.4,-3.6 2.5,-6.5 2.6,-3.5 6.7,-3.5 1.8,0 4,2.4 0.5,-0.6 1.6,-1.5 1.2,-0.9 2,-0.9 0.8,0 0.8,2.1 0,0.6 -0.3,2.2 -0.3,1.7 -0.7,2.4 -0.5,1.3 -0.5,9.1 0,1.5 0.3,1.5 1,0 2.7,-2.3 1.5,-2.1 2.9,-5.2 0,-0.6 0,-1.1 V 18 q 0,-2.7 0.6,-3.3 0.5,-0.5 1.9,-1.6 1.5,-1 2.1,-1 0.7,0 0.9,0.2 0.1,0.2 0.1,0.8 0,3 -1.1,5.6 -0.3,3.2 -0.3,4.4 3,-5.5 4.2,-7.2 2,-3.3 3.7,-3.3 1.1,0 2,0.9 0.9,0.8 0.9,2 0,1.3 0,2.4 0,1 -0.1,1.7 0,0.6 0,0.7 0.2,-0.4 1.9,-2.5 1.6,-2 2.2,-2.7 0.6,-0.6 1.3,-1.2 1.3,-1.3 2.3,-1.3 1.1,0 2,0.8 0.9,0.8 0.9,2 0,2.4 -0.6,7.2 -0.5,4.8 -0.5,6.1 0,1.2 0.4,1.2 0.9,0 2.6,-2.3 1.3,-1.9 2.6,-4.5 l 0.1,-1.7 q 0,-6 0.6,-6.6 0.5,-0.6 1.9,-1.6 1.5,-1.1 2.1,-1.1 0.7,0 0.8,0.2 0.2,0.2 0.2,0.9 0,2.4 -1.1,4.9 -0.8,5.1 -0.8,8.4 0,3.3 1.1,3.3 1.2,0 3,-2.2 1.7,-2.3 3.5,-6.7 0.5,-5.6 0.7,-6 0.4,-0.5 1.6,-1.7 1.2,-1.1 2,-1.1 0.9,0 0.9,2.1 0,0.5 -0.4,2.2 -0.3,1.6 -0.6,2.3 -0.7,1.6 -0.7,9.7 0,1.5 0.4,1.5 0.9,0 2.6,-2.3 1.6,-2.3 3.2,-5.8 -0.9,-1.3 -0.9,-3 0,-3.3 2.1,-5.3 2.2,-2.1 4.6,-2.1 1.5,0 2.3,0.9 0.9,0.8 0.9,1.6 0,1.9 -0.9,1.9 -0.7,0 -0.7,-0.4 l 0.1,-0.9 q 0,-1 -1.2,-1 -1.1,0 -2.2,1.5 -1,1.5 -1,2.4 0,1 0.1,1.5 0.1,0.6 0.2,1 0.2,0.3 0.5,0.8 0.4,0.5 0.5,0.8 l 0.6,0.8 q 0.4,0.5 0.6,0.7 2.9,-2.4 6.9,-5.4 0.3,-0.2 0.5,-0.2 0.6,0 0.6,0.7 0,0.6 -0.5,0.9 -3.6,2.3 -6.8,5 1.3,1.8 1.3,3.9 0,2.1 -1.7,3.6 -1.6,1.6 -4.1,1.6 -2.5,0 -2.5,-2.4 0,-1.8 3.7,-5.4 -0.3,-0.3 -1,-1 -0.7,-0.7 -1,-1.1 -0.1,0.1 -0.1,0.2 -4.4,9.4 -7.5,9.4 -2.1,0 -3.3,-0.9 -0.4,-0.4 -0.4,-2.4 0,-2 0.2,-4.5 -1.8,3.8 -3.6,5.8 -1.8,2 -4,2 -2.2,0 -2.9,-1.2 -0.7,-1.2 -0.7,-4 v -0.9 q -3.3,6.1 -5.8,6.1 -1.9,0 -3,-0.9 -0.4,-0.4 -0.4,-2 0,-1.7 0.3,-5.4 Q 97,20.7 97,18.9 97,17 96.4,17 q -0.7,0 -3.2,2.5 -2.4,2.5 -2.5,3.5 -0.4,1.9 -0.4,8.2 0,1.6 -0.8,1.6 -1.3,0 -2.5,-0.4 -1.1,-0.3 -1.1,-1 0,-0.6 0.3,-5.5 0.4,-4.9 0.4,-6.8 0,-2.1 -0.7,-2.1 -0.6,0 -3.1,3.9 -2.4,3.8 -2.7,5.3 -0.2,1.5 -0.2,3.3 v 1.7 q 0,1.6 -0.9,1.6 -1.3,0 -2.6,-0.4 -1.2,-0.3 -1.2,-1 0,-0.6 0.3,-4.4 0,-0.4 0.1,-0.9 -3.6,6.7 -6.1,6.7 -2.2,0 -3.3,-0.9 -0.4,-0.4 -0.4,-2 0,-1.6 0.1,-4.3 -1.4,3.7 -2.9,5.4 -1.4,1.8 -3.6,1.8 -2.3,0 -4,-2.1 -1.3,-1.7 -1.6,-4.8 -0.2,0.4 -0.5,0.9 -3.7,6 -9.1,6 -3.2,0 -5,-2.4 -1.7,-2.1 -1.8,-4.8 -3.7,7.2 -6.4,7.2 -2.2,0 -3.3,-0.9 -0.4,-0.4 -0.4,-4.9 0,-4.5 1,-7.7 -1,0 -1.7,-0.1 -0.3,2.6 -2.9,6.3 Q 18.6,33.1 10,33.1 7.6,33.1 5.6,31.9 3.6,30.8 2.4,29.1 0,25.6 0,21.7 0,11.9 5,6 10.1,0 17.1,0 q 2.6,0 4.3,1.6 1.7,1.5 1.7,3.9 0,2.3 -1.2,4.3 -1.2,2 -2.9,2 -1.6,0 -1.6,-0.9 0,-1 1.1,-2.3 1.1,-1.2 1.1,-2.5 0,-4 -4.3,-4 -4.2,0 -7.6,5.6 -3.4,5.7 -3.4,11.7 0,4.1 2.4,7.4 2.3,3.2 6.6,3.2 5,0 9.7,-6.7 z m 18.2,-0.2 q 3.3,-0.5 4.8,-2.1 1.6,-1.5 1.6,-4.1 0,-2.5 -1.6,-2.5 -2,0 -3.3,2.8 -1.4,2.6 -1.5,5.9 z m 21.5,-8.2 q -1.6,0 -3.4,2.3 -1.7,2.3 -1.7,5.4 0,3.2 0.9,5.2 0.9,2 2.4,2 1.9,0 5.5,-9.2 0,-0.5 0.1,-1.5 0.1,-1.2 0.1,-1.7 -0.5,-0.9 -1.8,-1.7 -1.2,-0.8 -2.1,-0.8 z m 68,11.5 q -2.2,2.2 -2.2,3.6 0,1.4 1.4,1.4 0.8,0 1.4,-0.7 1.2,-1.7 -0.6,-4.3 z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="bg on">
+          <div class="content">
+            <picture>
+              <source media="(min-width: 1070px)" srcset="images/hero1.webp" />
+              <source
+                media="(min-width: 600px)"
+                srcset="images/hero1-medium.webp" />
+              <source
+                media="(max-width: 759px)"
+                srcset="images/hero1-small.webp" />
+              <img src="images/hero1.webp" alt="hero image 1"
+            /></picture>
+            <div class="container">
+              <h1>
+                Welcome to the world <br />
+                of ice cream
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor
+              </p>
+              <a href="#">Find now</a>
+            </div>
+          </div>
+          <div class="content">
+            <picture>
+              <source media="(min-width: 1070px)" srcset="images/hero2.webp" />
+              <source
+                media="(min-width: 600px)"
+                srcset="images/hero2-medium.webp" />
+              <source
+                media="(max-width: 599px)"
+                srcset="images/hero2-small.webp" />
+              <img src="images/hero2.webp" alt="hero image 1"
+            /></picture>
+            <div class="container">
+              <h1>
+                The world of kindness<br />
+                and happiness
+              </h1>
+              <p id="width">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris
+              </p>
+              <a href="#">Yes now</a>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="container2">
+            <div class="controller on">
+              <button aria-label="Switch on/ off">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <title>Controller</title>
+                  <path class="stroke rect1" d="m10 3v26" />
+                  <path class="stroke rect2" d="m22 3v26" />
+                  <path class="stroke hide rect3" d="m5 3v26" />
+                </svg>
+              </button>
+              <div class="deep-container">
+                <div class="play slide"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grid membership">
+        <picture class="card">
+          <source
+            media="(min-width: 1070px)"
+            srcset="images/member-card.webp" />
+          <source
+            media="(min-width: 600px)"
+            srcset="images/member-card-medium.webp" />
+          <source
+            media="(max-width: 599px)"
+            srcset="images/member-card-small.webp" />
+          <img src="images/member-card.webp" alt="Membership card"
+        /></picture>
+        <picture class="tag">
+          <source media="(min-width: 1070px)" srcset="images/tag.webp" />
+          <source media="(min-width: 600px)" srcset="images/tag-medium.webp" />
+          <img src="images/tag.webp" alt="Discoount tag"
+        /></picture>
+        <div class="bg"></div>
+        <div class="wrapper">
+          <h2>Save up to 60%</h2>
+          <p>
+            Become creamus' member and get the benefit. Lorem ipsum dolor sit
+            amet, consectetur adipisicing
+          </p>
+          <a href="#">Register</a>
+        </div>
+      </section>
+      <section class="products">
+        <div class="ice-cake">
+          <div class="bg"></div>
+          <div class="container">
+            <h2>Choose your ice cream cake variant</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </div>
+          <div class="content">
+            <div class="container2">
+              <div class="wrapper on">
+                <div class="card">
+                  <div class="tag">10 % off</div>
+                  <img
+                    srcset="
+                      images/ice-cake1-small.webp  205w,
+                      images/ice-cake1-medium.webp 231w,
+                      images/ice-cake1.webp        282w
+                    "
+                    sizes="(max-width: 599px) 231px, (max-width: 1070px) 205px, 282px"
+                    src="images/ice-cake1.webp"
+                    alt="Vanilla sweet"
+                  />
+                  <h3>Banana Choco</h3>
+                  <div class="price">£ 10, 99</div>
+                  <div class="price-rating">
+                    <span class="initial-price">£ 12,21</span>
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Rating"
+                    >
+                      <path
+                        d="m27.5 13.5c0.4 1.3-4.5 4.3-4.9 5.6-0.5 1.4 1.9 6.6 0.7 7.4-1.2 0.9-5.6-2.8-7-2.8-1.4 0-5.8 3.8-6.9 2.9-1.2-0.8 1-6 0.6-7.4-0.5-1.3-5.5-4.2-5-5.5 0.4-1.4 6.2-0.9 7.3-1.8 1.2-0.8 2.4-6.3 3.9-6.3 1.4-0.1 2.7 5.5 3.9 6.3 1.2 0.8 6.9 0.3 7.4 1.6z"
+                        fill="#ffd700"
+                      ></path>
+                    </svg>
+                    <span class="rating">4.5 (1.765)</span>
+                  </div>
+                </div>
+                <div class="card middleCard">
+                  <div class="tag">10 % off</div>
+                  <img
+                    srcset="
+                      images/ice-cake2-small.webp  205w,
+                      images/ice-cake2-medium.webp 231w,
+                      images/ice-cake2.webp        282w
+                    "
+                    sizes="(max-width: 599px) 231px, (max-width: 1070px) 205px, 282px"
+                    src="images/ice-cake2.webp"
+                    alt="Vanilla sweet"
+                  />
+                  <h3>Three in One</h3>
+                  <div class="price">£ 12, 99</div>
+                  <div class="price-rating">
+                    <span class="initial-price">£ 14,43</span>
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Rating"
+                    >
+                      <path
+                        d="m30.1 12.7c0.6 1.7-5.6 5.4-6.1 7.2-0.6 1.7 2.3 8.3 0.9 9.4-1.5 1-7-3.7-8.7-3.7-1.8 0.1-7.3 4.8-8.7 3.8-1.5-1 1.3-7.7 0.7-9.4-0.5-1.7-6.8-5.4-6.2-7.1 0.5-1.7 7.7-1.1 9.2-2.2 1.4-1.1 3-8.1 4.8-8.1 1.8-0.1 3.4 7 4.9 8 1.5 1.1 8.7 0.4 9.2 2.1z"
+                        fill="#ffd700"
+                      ></path>
+                    </svg>
+                    <span class="rating">4.8 (1.101)</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="tag">10 % off</div>
+                  <img
+                    srcset="
+                      images/ice-cake3-small.webp  205w,
+                      images/ice-cake3-medium.webp 231w,
+                      images/ice-cake3.webp        282w
+                    "
+                    sizes="(max-width: 599px) 231px, (max-width: 1070px) 205px, 282px"
+                    src="images/ice-cake3.webp"
+                    alt="Vanilla sweet"
+                  />
+                  <h3>Vanilla Sweet</h3>
+                  <div class="price">£ 10, 99</div>
+                  <div class="price-rating">
+                    <span class="initial-price">£ 12,21</span>
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Rating"
+                    >
+                      <path
+                        d="m27.5 13.5c0.4 1.3-4.5 4.3-4.9 5.6-0.5 1.4 1.9 6.6 0.7 7.4-1.2 0.9-5.6-2.8-7-2.8-1.4 0-5.8 3.8-6.9 2.9-1.2-0.8 1-6 0.6-7.4-0.5-1.3-5.5-4.2-5-5.5 0.4-1.4 6.2-0.9 7.3-1.8 1.2-0.8 2.4-6.3 3.9-6.3 1.4-0.1 2.7 5.5 3.9 6.3 1.2 0.8 6.9 0.3 7.4 1.6z"
+                        fill="#ffd700"
+                      ></path>
+                    </svg>
+                    <span class="rating">4.5 (1.765)</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="tag">10 % off</div>
+                  <img
+                    srcset="
+                      images/ice-cake4-small.webp  205w,
+                      images/ice-cake4-medium.webp 231w,
+                      images/ice-cake4.webp        282w
+                    "
+                    sizes="(max-width: 599px) 231px, (max-width: 1070px) 205px, 282px"
+                    src="images/ice-cake4.webp"
+                    alt="Vanilla sweet"
+                  />
+                  <h3>Vanilla Choco</h3>
+                  <div class="price">£ 10, 99</div>
+                  <div class="price-rating">
+                    <span class="initial-price">£ 12,21</span>
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Rating"
+                    >
+                      <path
+                        d="m27.5 13.5c0.4 1.3-4.5 4.3-4.9 5.6-0.5 1.4 1.9 6.6 0.7 7.4-1.2 0.9-5.6-2.8-7-2.8-1.4 0-5.8 3.8-6.9 2.9-1.2-0.8 1-6 0.6-7.4-0.5-1.3-5.5-4.2-5-5.5 0.4-1.4 6.2-0.9 7.3-1.8 1.2-0.8 2.4-6.3 3.9-6.3 1.4-0.1 2.7 5.5 3.9 6.3 1.2 0.8 6.9 0.3 7.4 1.6z"
+                        fill="#ffd700"
+                      ></path>
+                    </svg>
+                    <span class="rating">4.5 (1.765)</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="tag">10 % off</div>
+                  <img
+                    srcset="
+                      images/ice-cake5-small.webp  205w,
+                      images/ice-cake5-medium.webp 231w,
+                      images/ice-cake5.webp        282w
+                    "
+                    sizes="(max-width: 599px) 231px, (max-width: 1070px) 205px, 282px"
+                    src="images/ice-cake5.webp"
+                    alt="Vanilla sweet"
+                  />
+                  <h3>Choco Sweet</h3>
+                  <div class="price">£ 10, 99</div>
+                  <div class="price-rating">
+                    <span class="initial-price">£ 12,21</span>
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="Rating"
+                    >
+                      <path
+                        d="m27.5 13.5c0.4 1.3-4.5 4.3-4.9 5.6-0.5 1.4 1.9 6.6 0.7 7.4-1.2 0.9-5.6-2.8-7-2.8-1.4 0-5.8 3.8-6.9 2.9-1.2-0.8 1-6 0.6-7.4-0.5-1.3-5.5-4.2-5-5.5 0.4-1.4 6.2-0.9 7.3-1.8 1.2-0.8 2.4-6.3 3.9-6.3 1.4-0.1 2.7 5.5 3.9 6.3 1.2 0.8 6.9 0.3 7.4 1.6z"
+                        fill="#ffd700"
+                      ></path>
+                    </svg>
+                    <span class="rating">4.6 (2.100)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controller">
+              <button aria-label="Scroll right 1 card">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Scroll right</title>
+                  <path
+                    class="large-stroke"
+                    d="m16 30c-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14 7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m16 30c-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14 7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14z"
+                  ></path>
+                  <path class="large-stroke" d="m17.8 19.9l-3-3.7 3-3.8"></path>
+                  <path class="stroke" d="m17.8 19.9l-3-3.7 3-3.8"></path>
+                  <path
+                    class="large-stroke"
+                    d="m16 30c-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14 7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m16 30c-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14 7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14z"
+                  ></path>
+                  <path class="large-stroke" d="m17.8 19.9l-3-3.7 3-3.8"></path>
+                  <path class="stroke" d="m17.8 19.9l-3-3.7 3-3.8"></path>
+                </svg>
+              </button>
+              <button aria-label="Scroll left 1 card">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Scroll left</title>
+                  <path
+                    class="large-stroke"
+                    d="m16 2c7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m16 2c7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14z"
+                  ></path>
+                  <path class="large-stroke" d="m14.2 12.4l3 3.8-3 3.7"></path>
+                  <path class="stroke" d="m14.2 12.4l3 3.8-3 3.7"></path>
+                  <path
+                    class="large-stroke"
+                    d="m16 2c7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m16 2c7.7 0 14 6.3 14 14 0 7.7-6.3 14-14 14-7.7 0-14-6.3-14-14 0-7.7 6.3-14 14-14z"
+                  ></path>
+                  <path class="large-stroke" d="m14.2 12.4l3 3.8-3 3.7"></path>
+                  <path class="stroke" d="m14.2 12.4l3 3.8-3 3.7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid other-type">
+          <div class="bg"></div>
+          <div class="container">
+            <h2>We also provide other type of ice cream</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+          <div class="wrapper">
+            <button class="other-controller">More ></button>
+            <div class="carousel">
+              <div class="small">
+                <img
+                  srcset="
+                    images/mini-cake-small.webp 242w,
+                    images/mini-cake.webp       280w
+                  "
+                  sizes=" (max-width: 1070px) 242px, 280px"
+                  src="images/mini-cake.webp"
+                  alt="Mini ice cream cake"
+                />
+              </div>
+              <div class="medium">
+                <img
+                  srcset="images/cup-small.webp 242w, images/cup.webp 280w"
+                  sizes=" (max-width: 1070px) 242px, 280px"
+                  src="images/cup.webp"
+                  alt="Ice crem cup"
+                />
+              </div>
+              <div class="large">
+                <img
+                  srcset="images/cone-small.webp 242w, images/cone.webp 280w"
+                  sizes="(max-width: 1070px) 242px, 280px"
+                  src="images/cone.webp"
+                  alt="Ice crem cone"
+                />
+              </div>
+              <div class="large">
+                <img
+                  srcset="
+                    images/ice-cream-drink-small.webp 242w,
+                    images/ice-cream-drink.webp       280w
+                  "
+                  sizes=" (max-width: 1070px) 242px, 280px"
+                  src="images/ice-cream-drink.webp"
+                  alt="Ice crem drink"
+                />
+              </div>
+              <div class="large">
+                <img
+                  srcset="images/stick-small.webp 242w, images/stick.webp 280w"
+                  sizes=" (max-width: 1070px) 242px, 280px"
+                  src="images/stick.webp"
+                  alt="Ice crem stick"
+                />
+              </div>
+            </div>
+            <div class="indicator">
+              <div class="bg-color"></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid favorite">
+          <div class="bg"></div>
+          <div class="container">
+            <h2>Haven't found yet?</h2>
+            <p>
+              See our costumer's favorite. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit,
+            </p>
+            <div class="controller">
+              <button aria-label="Scroll right 1 card">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Scroll right</title>
+                  <path
+                    class="large-stroke"
+                    d="m16.1 2.9c7.2 0 13.1 5.9 13.1 13.2 0 7.2-5.9 13.1-13.1 13.1-7.3 0-13.2-5.9-13.2-13.1 0-7.3 5.9-13.2 13.2-13.2z"
+                  />
+                  <path
+                    class="stroke"
+                    d="m16.1 2.9c7.2 0 13.1 5.9 13.1 13.2 0 7.2-5.9 13.1-13.1 13.1-7.3 0-13.2-5.9-13.2-13.1 0-7.3 5.9-13.2 13.2-13.2z"
+                  />
+                  <path class="large-stroke" d="m21.1 16.1h-9.7" />
+                  <path class="large-stroke" d="m13.8 18.9l-2.8-2.8 2.8-2.9" />
+                  <path class="stroke" d="m21.1 16.1h-8.8" />
+                  <path class="stroke" d="m13.8 18.9l-2.8-2.8 2.8-2.9" />
+                </svg>
+              </button>
+              <button aria-label="Scroll left 1 card">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Scroll left</title>
+                  <path
+                    class="large-stroke"
+                    d="m16.1 29.2c-7.3 0-13.2-5.9-13.2-13.1 0-7.3 5.9-13.2 13.2-13.2 7.2 0 13.1 5.9 13.1 13.2 0 7.2-5.9 13.1-13.1 13.1z"
+                  />
+                  <path
+                    class="stroke"
+                    d="m16.1 29.2c-7.3 0-13.2-5.9-13.2-13.1 0-7.3 5.9-13.2 13.2-13.2 7.2 0 13.1 5.9 13.1 13.2 0 7.2-5.9 13.1-13.1 13.1z"
+                  />
+                  <path class="large-stroke" d="m11 16.1h9.7" />
+                  <path class="large-stroke" d="m18.3 13.2l2.8 2.9-2.8 2.8" />
+                  <path class="stroke" d="m11 16.1h8.8" />
+                  <path class="stroke" d="m18.3 13.2l2.8 2.9-2.8 2.8" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="carousel">
+            <div>
+              <img
+                srcset="
+                  images/mini-cup1-small.webp 220w,
+                  images/mini-cup1.webp       256w
+                "
+                sizes=" (max-width: 1070px) 220px, 256px"
+                src="images/mini-cup1.webp"
+                alt="Choco Milk"
+              />
+              <h3>Choco Milk</h3>
+              <div class="price">
+                <span>£ 8, 99</span>
+              </div>
+              <div class="feedback">
+                <button>
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Like"
+                  >
+                    <path
+                      class="large-stroke"
+                      d="m4 15.1c-0.8-2.6-0.7-5.6 0.9-7.8 1-1.5 2.7-2.5 4.4-2.7 2.5-0.4 5.1 0.9 6.6 3 1.5-2.1 4.3-3.4 6.4-3 2.1 0.1 3.4 1.2 4.5 2.7 1.8 2.2 1.9 5.2 1.2 7.8-1.7 4.9-6.9 10-12.1 12.3-5.1-2.3-10.6-7.4-11.9-12.3z"
+                    ></path>
+                    <path
+                      class="stroke"
+                      d="m4 15.1c-0.8-2.6-0.7-5.6 0.9-7.8 1-1.5 2.7-2.5 4.4-2.7 2.5-0.4 5.1 0.9 6.6 3 1.5-2.1 4.3-3.4 6.4-3 2.1 0.1 3.4 1.2 4.5 2.7 1.8 2.2 1.9 5.2 1.2 7.8-1.7 4.9-6.9 10-12.1 12.3-5.1-2.3-10.6-7.4-11.9-12.3z"
+                    ></path>
+                  </svg>
+                </button>
+                <span class="like">3.7 k</span>
+                <button>
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Comment"
+                  >
+                    <path
+                      class="large-stroke"
+                      d="m28 15.5c0 2.7-0.9 5.3-2.7 7.3-0.9 1.3 0.1 3.5 1.8 5.2-2.4-0.1-4.5-0.4-6.1-2-1.6 0.7-3.3 1.1-4.9 1.1-6.7 0-12.1-5.2-12.1-11.6 0-6.3 5.4-11.5 12.1-11.5 6.5 0 11.9 5.2 11.9 11.5z"
+                    ></path>
+                    <path
+                      class="stroke"
+                      d="m28 15.5c0 2.7-0.9 5.3-2.7 7.3-0.9 1.3 0.1 3.5 1.8 5.2-2.4-0.1-4.5-0.4-6.1-2-1.6 0.7-3.3 1.1-4.9 1.1-6.7 0-12.1-5.2-12.1-11.6 0-6.3 5.4-11.5 12.1-11.5 6.5 0 11.9 5.2 11.9 11.5z"
+                    ></path>
+                  </svg>
+                </button>
+                <span class="comment">0.3 k</span>
+              </div>
+              <button class="share">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Share"
+                >
+                  <path
+                    class="large-stroke"
+                    d="m28.4 14.1l-9.2 7.5-0.1-3.8c-12.2-0.3-15.6 7.8-15.6 7.8 1.1-9 5.9-15.3 15.6-15.2v-3.9z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m28.4 14.1l-9.2 7.5-0.1-3.8c-12.2-0.3-15.6 7.8-15.6 7.8 1.1-9 5.9-15.3 15.6-15.2v-3.9z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <img
+                srcset="
+                  images/mini-cup2-small.webp 220w,
+                  images/mini-cup2.webp       256w
+                "
+                sizes=" (max-width: 1070px) 220px, 256px"
+                src="images/mini-cup2.webp"
+                alt="Strawberry milk"
+              />
+              <h3>Strawberry milk</h3>
+              <div class="price">
+                <span>£ 7, 99</span>
+              </div>
+              <div class="feedback">
+                <button>
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Like"
+                  >
+                    <path
+                      class="large-stroke"
+                      d="m4 15.1c-0.8-2.6-0.7-5.6 0.9-7.8 1-1.5 2.7-2.5 4.4-2.7 2.5-0.4 5.1 0.9 6.6 3 1.5-2.1 4.3-3.4 6.4-3 2.1 0.1 3.4 1.2 4.5 2.7 1.8 2.2 1.9 5.2 1.2 7.8-1.7 4.9-6.9 10-12.1 12.3-5.1-2.3-10.6-7.4-11.9-12.3z"
+                    ></path>
+                    <path
+                      class="stroke"
+                      d="m4 15.1c-0.8-2.6-0.7-5.6 0.9-7.8 1-1.5 2.7-2.5 4.4-2.7 2.5-0.4 5.1 0.9 6.6 3 1.5-2.1 4.3-3.4 6.4-3 2.1 0.1 3.4 1.2 4.5 2.7 1.8 2.2 1.9 5.2 1.2 7.8-1.7 4.9-6.9 10-12.1 12.3-5.1-2.3-10.6-7.4-11.9-12.3z"
+                    ></path>
+                  </svg>
+                </button>
+                <span class="like">3.7 k</span>
+                <button>
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Comment"
+                  >
+                    <path
+                      class="large-stroke"
+                      d="m28 15.5c0 2.7-0.9 5.3-2.7 7.3-0.9 1.3 0.1 3.5 1.8 5.2-2.4-0.1-4.5-0.4-6.1-2-1.6 0.7-3.3 1.1-4.9 1.1-6.7 0-12.1-5.2-12.1-11.6 0-6.3 5.4-11.5 12.1-11.5 6.5 0 11.9 5.2 11.9 11.5z"
+                    ></path>
+                    <path
+                      class="stroke"
+                      d="m28 15.5c0 2.7-0.9 5.3-2.7 7.3-0.9 1.3 0.1 3.5 1.8 5.2-2.4-0.1-4.5-0.4-6.1-2-1.6 0.7-3.3 1.1-4.9 1.1-6.7 0-12.1-5.2-12.1-11.6 0-6.3 5.4-11.5 12.1-11.5 6.5 0 11.9 5.2 11.9 11.5z"
+                    ></path>
+                  </svg>
+                </button>
+                <span class="comment">0.3 k</span>
+              </div>
+              <button class="share">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Share"
+                >
+                  <path
+                    class="large-stroke"
+                    d="m28.4 14.1l-9.2 7.5-0.1-3.8c-12.2-0.3-15.6 7.8-15.6 7.8 1.1-9 5.9-15.3 15.6-15.2v-3.9z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m28.4 14.1l-9.2 7.5-0.1-3.8c-12.2-0.3-15.6 7.8-15.6 7.8 1.1-9 5.9-15.3 15.6-15.2v-3.9z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <img
+                srcset="
+                  images/mini-cup3-small.webp 220w,
+                  images/mini-cup3.webp       256w
+                "
+                sizes=" (max-width: 1070px) 220px, 256px"
+                src="images/mini-cup3.webp"
+                alt="Raspberry milk"
+              />
+              <h3>Raspberry milk</h3>
+              <div class="price">
+                <span>£ 7, 99</span>
+              </div>
+              <div class="feedback">
+                <button>
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Like"
+                  >
+                    <path
+                      class="large-stroke"
+                      d="m4 15.1c-0.8-2.6-0.7-5.6 0.9-7.8 1-1.5 2.7-2.5 4.4-2.7 2.5-0.4 5.1 0.9 6.6 3 1.5-2.1 4.3-3.4 6.4-3 2.1 0.1 3.4 1.2 4.5 2.7 1.8 2.2 1.9 5.2 1.2 7.8-1.7 4.9-6.9 10-12.1 12.3-5.1-2.3-10.6-7.4-11.9-12.3z"
+                    ></path>
+                    <path
+                      class="stroke"
+                      d="m4 15.1c-0.8-2.6-0.7-5.6 0.9-7.8 1-1.5 2.7-2.5 4.4-2.7 2.5-0.4 5.1 0.9 6.6 3 1.5-2.1 4.3-3.4 6.4-3 2.1 0.1 3.4 1.2 4.5 2.7 1.8 2.2 1.9 5.2 1.2 7.8-1.7 4.9-6.9 10-12.1 12.3-5.1-2.3-10.6-7.4-11.9-12.3z"
+                    ></path>
+                  </svg>
+                </button>
+                <span class="like">3.7 k</span>
+                <button>
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Comment"
+                  >
+                    <path
+                      class="large-stroke"
+                      d="m28 15.5c0 2.7-0.9 5.3-2.7 7.3-0.9 1.3 0.1 3.5 1.8 5.2-2.4-0.1-4.5-0.4-6.1-2-1.6 0.7-3.3 1.1-4.9 1.1-6.7 0-12.1-5.2-12.1-11.6 0-6.3 5.4-11.5 12.1-11.5 6.5 0 11.9 5.2 11.9 11.5z"
+                    ></path>
+                    <path
+                      class="stroke"
+                      d="m28 15.5c0 2.7-0.9 5.3-2.7 7.3-0.9 1.3 0.1 3.5 1.8 5.2-2.4-0.1-4.5-0.4-6.1-2-1.6 0.7-3.3 1.1-4.9 1.1-6.7 0-12.1-5.2-12.1-11.6 0-6.3 5.4-11.5 12.1-11.5 6.5 0 11.9 5.2 11.9 11.5z"
+                    ></path>
+                  </svg>
+                </button>
+                <span class="comment">0.3 k</span>
+              </div>
+              <button class="share">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Share"
+                >
+                  <path
+                    class="large-stroke"
+                    d="m28.4 14.1l-9.2 7.5-0.1-3.8c-12.2-0.3-15.6 7.8-15.6 7.8 1.1-9 5.9-15.3 15.6-15.2v-3.9z"
+                  ></path>
+                  <path
+                    class="stroke"
+                    d="m28.4 14.1l-9.2 7.5-0.1-3.8c-12.2-0.3-15.6 7.8-15.6 7.8 1.1-9 5.9-15.3 15.6-15.2v-3.9z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="grid">
+      <div class="bg"></div>
+      <div class="container">
+        <nav>
+          <div class="wrapper">
+            <div class="logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 140.5 33"
+                aria-label="Homepage"
+              >
+                <path
+                  fill="white"
+                  d="m 23,23.3 q 0.4,-0.6 1.1,-2 0.9,-1.7 1.5,-2.5 -1.2,-0.5 -1.9,-1.5 -0.6,-1.1 -0.6,-2.4 0,-1.4 0.5,-2.4 0.6,-1 1.6,-1 1.1,0 1.9,1.1 0.9,1.1 0.9,2.4 0,1.4 -0.8,2.7 0.2,0.2 0.7,0.2 L 31,17.5 q 0.5,0 0.8,0.6 0.3,0.5 0.3,1 0,0.6 -0.3,3.8 -0.4,3.3 -0.4,5.2 0,1.8 0.4,1.8 0.9,0 2.6,-2.3 1.6,-2.3 3.1,-5.7 0.5,-3.9 2.4,-6.1 2.6,-3.2 6.7,-3.2 1.9,0 3.1,1.1 1.3,1 1.3,2.8 0,3.3 -2.9,5.6 -2.8,2.3 -6.9,2.4 0.2,2.2 1.5,3.8 1.3,1.6 2.9,1.6 1.7,0 3.1,-0.8 1.3,-0.8 2.4,-2.3 1.5,-1.9 2.7,-4.2 0.4,-3.6 2.5,-6.5 2.6,-3.5 6.7,-3.5 1.8,0 4,2.4 0.5,-0.6 1.6,-1.5 1.2,-0.9 2,-0.9 0.8,0 0.8,2.1 0,0.6 -0.3,2.2 -0.3,1.7 -0.7,2.4 -0.5,1.3 -0.5,9.1 0,1.5 0.3,1.5 1,0 2.7,-2.3 1.5,-2.1 2.9,-5.2 0,-0.6 0,-1.1 V 18 q 0,-2.7 0.6,-3.3 0.5,-0.5 1.9,-1.6 1.5,-1 2.1,-1 0.7,0 0.9,0.2 0.1,0.2 0.1,0.8 0,3 -1.1,5.6 -0.3,3.2 -0.3,4.4 3,-5.5 4.2,-7.2 2,-3.3 3.7,-3.3 1.1,0 2,0.9 0.9,0.8 0.9,2 0,1.3 0,2.4 0,1 -0.1,1.7 0,0.6 0,0.7 0.2,-0.4 1.9,-2.5 1.6,-2 2.2,-2.7 0.6,-0.6 1.3,-1.2 1.3,-1.3 2.3,-1.3 1.1,0 2,0.8 0.9,0.8 0.9,2 0,2.4 -0.6,7.2 -0.5,4.8 -0.5,6.1 0,1.2 0.4,1.2 0.9,0 2.6,-2.3 1.3,-1.9 2.6,-4.5 l 0.1,-1.7 q 0,-6 0.6,-6.6 0.5,-0.6 1.9,-1.6 1.5,-1.1 2.1,-1.1 0.7,0 0.8,0.2 0.2,0.2 0.2,0.9 0,2.4 -1.1,4.9 -0.8,5.1 -0.8,8.4 0,3.3 1.1,3.3 1.2,0 3,-2.2 1.7,-2.3 3.5,-6.7 0.5,-5.6 0.7,-6 0.4,-0.5 1.6,-1.7 1.2,-1.1 2,-1.1 0.9,0 0.9,2.1 0,0.5 -0.4,2.2 -0.3,1.6 -0.6,2.3 -0.7,1.6 -0.7,9.7 0,1.5 0.4,1.5 0.9,0 2.6,-2.3 1.6,-2.3 3.2,-5.8 -0.9,-1.3 -0.9,-3 0,-3.3 2.1,-5.3 2.2,-2.1 4.6,-2.1 1.5,0 2.3,0.9 0.9,0.8 0.9,1.6 0,1.9 -0.9,1.9 -0.7,0 -0.7,-0.4 l 0.1,-0.9 q 0,-1 -1.2,-1 -1.1,0 -2.2,1.5 -1,1.5 -1,2.4 0,1 0.1,1.5 0.1,0.6 0.2,1 0.2,0.3 0.5,0.8 0.4,0.5 0.5,0.8 l 0.6,0.8 q 0.4,0.5 0.6,0.7 2.9,-2.4 6.9,-5.4 0.3,-0.2 0.5,-0.2 0.6,0 0.6,0.7 0,0.6 -0.5,0.9 -3.6,2.3 -6.8,5 1.3,1.8 1.3,3.9 0,2.1 -1.7,3.6 -1.6,1.6 -4.1,1.6 -2.5,0 -2.5,-2.4 0,-1.8 3.7,-5.4 -0.3,-0.3 -1,-1 -0.7,-0.7 -1,-1.1 -0.1,0.1 -0.1,0.2 -4.4,9.4 -7.5,9.4 -2.1,0 -3.3,-0.9 -0.4,-0.4 -0.4,-2.4 0,-2 0.2,-4.5 -1.8,3.8 -3.6,5.8 -1.8,2 -4,2 -2.2,0 -2.9,-1.2 -0.7,-1.2 -0.7,-4 v -0.9 q -3.3,6.1 -5.8,6.1 -1.9,0 -3,-0.9 -0.4,-0.4 -0.4,-2 0,-1.7 0.3,-5.4 Q 97,20.7 97,18.9 97,17 96.4,17 q -0.7,0 -3.2,2.5 -2.4,2.5 -2.5,3.5 -0.4,1.9 -0.4,8.2 0,1.6 -0.8,1.6 -1.3,0 -2.5,-0.4 -1.1,-0.3 -1.1,-1 0,-0.6 0.3,-5.5 0.4,-4.9 0.4,-6.8 0,-2.1 -0.7,-2.1 -0.6,0 -3.1,3.9 -2.4,3.8 -2.7,5.3 -0.2,1.5 -0.2,3.3 v 1.7 q 0,1.6 -0.9,1.6 -1.3,0 -2.6,-0.4 -1.2,-0.3 -1.2,-1 0,-0.6 0.3,-4.4 0,-0.4 0.1,-0.9 -3.6,6.7 -6.1,6.7 -2.2,0 -3.3,-0.9 -0.4,-0.4 -0.4,-2 0,-1.6 0.1,-4.3 -1.4,3.7 -2.9,5.4 -1.4,1.8 -3.6,1.8 -2.3,0 -4,-2.1 -1.3,-1.7 -1.6,-4.8 -0.2,0.4 -0.5,0.9 -3.7,6 -9.1,6 -3.2,0 -5,-2.4 -1.7,-2.1 -1.8,-4.8 -3.7,7.2 -6.4,7.2 -2.2,0 -3.3,-0.9 -0.4,-0.4 -0.4,-4.9 0,-4.5 1,-7.7 -1,0 -1.7,-0.1 -0.3,2.6 -2.9,6.3 Q 18.6,33.1 10,33.1 7.6,33.1 5.6,31.9 3.6,30.8 2.4,29.1 0,25.6 0,21.7 0,11.9 5,6 10.1,0 17.1,0 q 2.6,0 4.3,1.6 1.7,1.5 1.7,3.9 0,2.3 -1.2,4.3 -1.2,2 -2.9,2 -1.6,0 -1.6,-0.9 0,-1 1.1,-2.3 1.1,-1.2 1.1,-2.5 0,-4 -4.3,-4 -4.2,0 -7.6,5.6 -3.4,5.7 -3.4,11.7 0,4.1 2.4,7.4 2.3,3.2 6.6,3.2 5,0 9.7,-6.7 z m 18.2,-0.2 q 3.3,-0.5 4.8,-2.1 1.6,-1.5 1.6,-4.1 0,-2.5 -1.6,-2.5 -2,0 -3.3,2.8 -1.4,2.6 -1.5,5.9 z m 21.5,-8.2 q -1.6,0 -3.4,2.3 -1.7,2.3 -1.7,5.4 0,3.2 0.9,5.2 0.9,2 2.4,2 1.9,0 5.5,-9.2 0,-0.5 0.1,-1.5 0.1,-1.2 0.1,-1.7 -0.5,-0.9 -1.8,-1.7 -1.2,-0.8 -2.1,-0.8 z m 68,11.5 q -2.2,2.2 -2.2,3.6 0,1.4 1.4,1.4 0.8,0 1.4,-0.7 1.2,-1.7 -0.6,-4.3 z"
+                ></path>
+              </svg>
+            </div>
+            <a href="https://id.pinterest.com/esiltade13/"
+              >Find more ideas on Pinterest
+            </a>
+          </div>
+          <div class="quick-links">
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="#">Cart</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="mailto:info.esiltade@gmx.com">For inquiries</a></li>
+              <li>
+                <a
+                  href="https://github.com/ferdychayadi13/creamus/blob/main/LICENSE"
+                  >License</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="notification">
+        <h3>Get notification</h3>
+        <p>Anything about our new products and discounts</p>
+        <form action="">
+          <label for="email">Enter an email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="youremail@example.com"
+          />
+          <button>Subscribe</button>
+        </form>
+      </div>
+      <p>
+        Copyright 2023 © Lorem Ipsum. Dolor sit amet, consectetur adipisicing
+        elit
+      </p>
+    </footer>
+  </body>
+</html>
